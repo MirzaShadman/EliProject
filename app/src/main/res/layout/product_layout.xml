@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/product_imv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintDimensionRatio="W, 1:0.7"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/product_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/product_imv"
+        app:layout_constraintStart_toStartOf="@+id/product_imv"
+        app:layout_constraintEnd_toEndOf="@+id/product_imv"/>
+
+    <TextView
+        android:id="@+id/product_price_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/product_name_tv"
+        app:layout_constraintStart_toStartOf="@+id/product_imv"
+        app:layout_constraintEnd_toEndOf="@+id/product_imv"/>
+
+    <Button
+        android:id="@+id/qty_dec"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/product_price_tv"
+        app:layout_constraintEnd_toStartOf="@+id/product_qty_tv"
+        android:background="@drawable/minus"/>
+
+    <TextView
+        android:id="@+id/product_qty_tv"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/product_price_tv"
+        app:layout_constraintStart_toStartOf="@+id/product_imv"
+        app:layout_constraintEnd_toEndOf="@+id/product_imv"/>
+
+    <Button
+        android:id="@+id/qty_inc"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@+id/product_price_tv"
+        app:layout_constraintStart_toEndOf="@+id/product_qty_tv"
+        android:background="@drawable/plus"/>
+
+    <CheckBox
+        android:id="@+id/select_chk"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/product_qty_tv"
+        app:layout_constraintStart_toStartOf="@+id/product_imv"
+        app:layout_constraintEnd_toEndOf="@+id/product_imv"
+        android:layout_marginTop="5dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

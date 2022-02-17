@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav"
+    app:startDestination="@id/productFragment">
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="fragments.ProductFragment"
+        android:label="ProductFragment" >
+        <action
+            android:id="@+id/action_productFragment_to_orderConfirmarion2"
+            app:destination="@id/orderConfirmarion2" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderConfirmarion2"
+        android:name="fragments.OrderConfirmarion"
+        android:label="OrderConfirmarion" >
+        <action
+            android:id="@+id/action_orderConfirmarion2_to_orderSuccesFragment2"
+            app:destination="@id/orderSuccesFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderSuccesFragment2"
+        android:name="fragments.OrderSuccesFragment"
+        android:label="OrderSuccesFragment" >
+        <action
+            android:id="@+id/action_orderSuccesFragment2_to_productFragment"
+            app:destination="@id/productFragment"
+            app:popUpTo="@id/nav"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

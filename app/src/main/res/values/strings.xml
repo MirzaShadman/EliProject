@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">EliProject</string>
+    <string name="enter_address">Please enter your address</string>
+    <string name="conform_order">Confirm Your Order</string>
+    <string name="order_successful">Your order is successful, Thanks</string>
+    <string name="continue_shopping">Continue Shopping</string>
+</resources>
